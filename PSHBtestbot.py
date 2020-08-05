@@ -16,12 +16,14 @@ from deeppavlov import build_model
 
 bot = telebot.TeleBot('1302667182:AAHMoB8cQOZReu2bjEKugEf9Q--7QFJLbi0')
 
+
 class AssistantDatasetReader(SimpleDSTC2DatasetReader):
 
     @staticmethod
     def _data_fname(datatype):
         assert datatype in ('val', 'trn', 'tst'), "wrong datatype name"
         return f"assistant-{datatype}.json"
+
 
 data = AssistantDatasetReader().read('assistant_data')
 
@@ -66,20 +68,21 @@ train_model(gobot_config)
 
 bot_model = build_model(gobot_config)
 
+
 # gobot_config = read_json(configs.go_bot.gobot_dstc2_minimal)
 # interact_model_by_telegram(model_config=gobot_config, token='1153548935:AAFIZkbBaYKjzlpum6wVM6oTHviL4VYlPY8')
 
 
+# def train(message):
 
 
-#def train(message):
-
-
-    # return bot_model
+# return bot_model
 
 def get_answer(bot_model):
     answer = bot_model([[{"text": "Привет"}]])
     return answer
+
+
 # from deeppavlov.utils.telegram import interact_model_by_telegram
 
 # interact_model_by_telegram(model_config=gobot_config, token='1153548935:AAFIZkbBaYKjzlpum6wVM6oTHviL4VYlPY8')
@@ -156,13 +159,16 @@ def callback_inline(call):
                          "Исполни мечту! Без залогов и поручительства\n— Кредит на любые цели\n— Сумма кредита до 5 000 000 руб.\n— Отсутствие комиссий по кредиту\n— Возможность выбора схемы погашения кредита")
         bot.send_message(chat_id, "retail.rshb.fil-it.ru/loans/bez_op", parse_mode='HTML', reply_markup=keyboard)
 
+def GetAnswer(message):
+    return bot_model([[{"text": message}]])
+
 
 @bot.message_handler(content_types=["text"])
 def send_help(message):
-    # bot.send_message(message.chat.id, 'Я только учусь и очень стараюсь, воспользуйтесь меню')
-    print("get some text")
-    print(bot_model(message))
-
+    #bot.send_message(message.chat.id, 'Я только учусь и очень стараюсь, воспользуйтесь меню')
+    #print(("get some text{}").format(message))
+    print(GetAnswer(message.text))
+    bot.send_message(message.chat.id, GetAnswer(message.text))
 
 # произвольное фото
 @bot.message_handler(content_types=["photo"])
@@ -172,8 +178,7 @@ def send_help_text(message):
 
 bot.enable_save_next_step_handlers(delay=2)
 
-#bot.load_next_step_handlers()
+# bot.load_next_step_handlers()
 
 if __name__ == '__main__':
     bot.polling(none_stop=True)
-
