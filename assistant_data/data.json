@@ -1,0 +1,138 @@
+[
+  [
+    {
+      "speaker": 1,
+      "text": "Привет"
+    },
+    {
+      "speaker": 2,
+      "text": "Привет, хочешь кредит?",
+      "act": "welcome_msg"
+    },
+    {
+      "speaker": 1,
+      "text": "Нет"
+    },
+    {
+      "speaker": 2,
+      "text": "До встречи!",
+      "act": "good_bye"
+    }
+  ],
+  [
+    {
+      "speaker": 1,
+      "text": "Здравствуйте"
+    },
+    {
+      "speaker": 2,
+      "text": "Привет, хочешь кредит?",
+      "act": "welcome_msg"
+    },
+    {
+      "speaker": 1,
+      "text": "да"
+    },
+    {
+      "speaker": 2,
+      "text": "Потребительский или коммерческий?",
+      "act": "suggest_tea"
+    },
+    {
+      "speaker": 1,
+      "text": "Потребительский"
+    },
+    {
+      "speaker": 2,
+      "text": "Тут должна быть форма про потребителький",
+      "act": "good_bye"
+    }
+  ],
+  [
+    {
+      "speaker": 1,
+      "text": "Доброе утро!"
+    },
+    {
+      "speaker": 2,
+      "text": "Привет, хочешь кредит?",
+      "act": "welcome_msg"
+    },
+    {
+      "speaker": 1,
+      "text": "да"
+    },
+    {
+      "speaker": 2,
+      "text": "Потребительский или коммерческий?",
+      "act": "suggest_cycling"
+    },
+    {
+      "speaker": 1,
+      "text": "коммерческий"
+    },
+    {
+      "speaker": 2,
+      "text": "Тут должна быть форма про коммерческий",
+      "act": "bad_bye"
+    }
+  ],
+  [
+    {
+      "speaker": 1,
+      "text": "Добрый вечер"
+    },
+    {
+      "speaker": 2,
+      "text": "Привет, хочешь кредит?",
+      "act": "welcome_msg"
+    },
+    {
+      "speaker": 1,
+      "text": "нет"
+    },
+    {
+      "speaker": 2,
+      "text": "Может хочешь монеты?",
+      "act": "suggest_tea"
+    },
+    {
+      "speaker": 1,
+      "text": "нет"
+    },
+    {
+      "speaker": 2,
+      "text": "Пока!",
+      "act": "bad_bye"
+    }
+  ]
+  [
+    {
+      "speaker": 1,
+      "text": "Добрый вечер"
+    },
+    {
+      "speaker": 2,
+      "text": "Привет, хочешь кредит?",
+      "act": "welcome_msg"
+    },
+    {
+      "speaker": 1,
+      "text": "нет"
+    },
+    {
+      "speaker": 2,
+      "text": "Может хочешь монеты?",
+      "act": "suggest_tea"
+    },
+    {
+      "speaker": 1,
+      "text": "да"
+    },
+    {
+      "speaker": 2,
+      "text": "Здесь блок про монеты",
+      "act": "bad_bye"
+    }
+  ]
+]
